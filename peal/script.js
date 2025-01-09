@@ -61,8 +61,9 @@ emailjs.init("1OiqE8hu58GQ2tiK4");
 function sendEmail(imageUrl, subject, templateId) {
   const templateParams = {
     to_email: 'arunkumar.s202006@gmail.com', // Recipient's email address
-    subject: subject,  // Subject (Image name)
-    message: 'open the link or image:', // Message content
+     // Subject (Image name)
+    message: 'open the link or image:',
+    subject: subject, // Message content
     image_url: imageUrl, // Image URL to be included in the email
   };
 
