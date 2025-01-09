@@ -1,0 +1,119 @@
+/* General body styling */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(234, 182, 182); /* Romantic pink background */
+  overflow: hidden;
+  transition: opacity 1s ease-in-out;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Black shadow */
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+  pointer-events: none; /* Prevent interaction while fading out */
+}
+
+body.loaded .overlay {
+  opacity: 0;
+}
+
+#mail {
+  width: 150px; /* Adjust size for mobile */
+  height: auto;
+  margin-bottom: 20px;
+  animation: bounce 1s infinite;
+}
+
+.content {
+  text-align: center;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: 1;
+}
+
+body.loaded .content {
+  opacity: 1;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin: 0;
+  color: #ffffff;
+}
+
+p {
+  font-size: 1rem;
+  color: #fff5f5;
+  margin: 10px 0 20px 0;
+}
+
+/* Button styling */
+button {
+  background-color: #ff4d6d; /* Bright romantic red */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  z-index: 10000; /* Ensure button is clickable */
+}
+
+button:hover {
+  background-color: #ff788f;
+  transform: scale(1.1);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+
+  #mail {
+    width: 120px; /* Smaller mail icon */
+  }
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}

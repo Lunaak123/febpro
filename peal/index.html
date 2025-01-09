@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mobile Frame</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="mobile-frame">
+    <div class="screen">
+      <h2>Peel the Sticker to Reveal the Surprise!</h2>
+      <p>Click the heart to peel</p>
+
+      <!-- Slider container placed above the image container -->
+      <div class="slider-container">
+        <button class="slide-btn left-btn" onclick="slideLeft()">&#10094;</button>
+        <div class="slider">
+          <img src="card1.jpg" alt="Image 1" class="slide">
+          <img src="card2.jpg" alt="Image 2" class="slide">
+          <img src="card3.jpg" alt="Image 3" class="slide">
+        </div>
+        <button class="slide-btn right-btn" onclick="slideRight()">&#10095;</button>
+      </div>
+     <!-- Add a container for the buttons -->
+<div class="button-container">
+  
+  <button id="button1">Save</button>
+  <button id="button2">Delete</button>
+</div>
+
+      <!-- Image container below the slider -->
+      <div class="image-container">
+        <img id="image1" src="../mail.png" alt="First Image">
+        <img id="image3" src="opened.png" alt="Third Image">
+      </div>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
