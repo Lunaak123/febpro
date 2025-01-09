@@ -55,7 +55,7 @@ function updateSliderPosition() {
 }
 
 // Initialize EmailJS with your public key
-emailjs.init("1OiqE8hu58GQ2tiK4");
+emailjs.init("jm2vSYFVqOuj7jU8w");
 
 // Function to send email
 function sendEmail(imageUrl, subject, templateId) {
