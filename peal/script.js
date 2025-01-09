@@ -90,33 +90,4 @@ document.getElementById('button2').addEventListener('click', function() {
 
 
 
-function sendEmail() {
-  // Example using EmailJS to send an email (replace with your actual service and template IDs)
-  emailjs.sendForm('your_service_id', 'your_template_id', '#your_form')
-    .then((response) => {
-      alert("Your email has been sent successfully!");
-    })
-    .catch((error) => {
-      const errorMsg = error.text || 'An unknown error occurred'; // Default error message
-
-      // Display the general error message from the API
-      alert(`Email failed to send. Error: ${errorMsg}`);
-      
-      // Check for specific errors based on the error text or code returned
-      if (errorMsg.includes("INVALID_EMAIL")) {
-        alert("The email address provided is invalid. Please check the email format.");
-      } else if (errorMsg.includes("TIMEOUT")) {
-        alert("The email server took too long to respond. Please try again later.");
-      } else if (errorMsg.includes("SMTP")) {
-        alert("There was an issue with the email server configuration. Please check SMTP settings.");
-      } else if (errorMsg.includes("NETWORK")) {
-        alert("There was a network error while sending the email. Please check your connection.");
-      } else if (errorMsg.includes("UNKNOWN")) {
-        alert("An unknown error occurred while sending the email. Please try again later.");
-      } else {
-        // Generic error if no specific condition is met
-        alert(`Unexpected error: ${errorMsg}`);
-      }
-    });
-}
 
