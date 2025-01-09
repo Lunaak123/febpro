@@ -69,10 +69,10 @@ function sendEmail(imageUrl, subject, templateId) {
 
   emailjs.send('service_x4bzd0l', templateId, templateParams)
     .then(function(response) {
-      console.log('Success:', response);
+      console.log('Success', response);
       alert('Email sent successfully!');
     }, function(error) {
-      console.log('Error:', error);
+      console.log('Error', error);
       alert('Error sending email!');
     });
 }
