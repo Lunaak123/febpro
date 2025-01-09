@@ -67,7 +67,7 @@ function sendEmail(imageUrl, subject, templateId) {
     image_url: imageUrl, // Image URL to be included in the email
   };
 
-  emailjs.send('service_x4bzd0l', templateId, templateParams)
+  emailjs.send('service_v0waneb', templateId, templateParams)
     .then(function(response) {
       console.log('Success', response);
       alert('Email sent successfully!');
