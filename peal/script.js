@@ -57,7 +57,7 @@ function updateSliderPosition() {
 
 
 // Initialize EmailJS with your public key
-emailjs.init("1OiqE8hu58GQ2tiK4");
+emailjs.init("NX9MO1iz35wQucWgk");
 
 // Function to send email
 function sendEmail(imageUrl, subject, templateId) {
@@ -68,7 +68,7 @@ function sendEmail(imageUrl, subject, templateId) {
     image_url: imageUrl, // Image URL to be included in the email
   };
 
-  emailjs.send('service_x4bzd0l', templateId, templateParams)
+  emailjs.send('service_14ytwph', templateId, templateParams)
     .then(function(response) {
       console.log('Success:', response);
       alert('Email sent successfully!');
@@ -80,10 +80,10 @@ function sendEmail(imageUrl, subject, templateId) {
 
 // Button 1 click event for sending Image 1
 document.getElementById('button1').addEventListener('click', function() {
-  sendEmail('https://ibb.co/B4Ng8JJ', 'Image 1', 'template_lq8dvg6');
+  sendEmail('https://ibb.co/B4Ng8JJ', 'Image 1', 'template_gxmvvso');
 });
 
 // Button 2 click event for sending Image 2
 document.getElementById('button2').addEventListener('click', function() {
-  sendEmail('https://ibb.co/8KhB3gb', 'Image 2', 'template_ef182zq');
+  sendEmail('https://ibb.co/8KhB3gb', 'Image 2', 'template_gxmvvso');
 });
