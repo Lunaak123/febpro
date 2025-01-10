@@ -54,41 +54,36 @@ function updateSliderPosition() {
   slider.style.transform = `translateX(-${currentIndex * 100}%)`;
 }
 
+
+
 // Initialize EmailJS with your public key
-emailjs.init("jm2vSYFVqOuj7jU8w");
+emailjs.init("1OiqE8hu58GQ2tiK4");
 
 // Function to send email
 function sendEmail(imageUrl, subject, templateId) {
   const templateParams = {
     to_email: 'arunkumar.s202006@gmail.com', // Recipient's email address
-     // Subject (Image name)
-    message: 'open the link or image:',
-    subject: subject, // Message content
+    subject: subject,  // Subject (Image name)
+    message: 'open the link or image:', // Message content
     image_url: imageUrl, // Image URL to be included in the email
   };
 
-  emailjs.send('service_v0waneb', templateId, templateParams)
+  emailjs.send('service_x4bzd0l', templateId, templateParams)
     .then(function(response) {
-      console.log('Success', response);
+      console.log('Success:', response);
       alert('Email sent successfully!');
     }, function(error) {
-      console.log('Error', error);
+      console.log('Error:', error);
       alert('Error sending email!');
     });
 }
 
 // Button 1 click event for sending Image 1
 document.getElementById('button1').addEventListener('click', function() {
-  console.log('Button 1 clicked');  // Debugging line
   sendEmail('https://ibb.co/B4Ng8JJ', 'Image 1', 'template_lq8dvg6');
 });
 
 // Button 2 click event for sending Image 2
 document.getElementById('button2').addEventListener('click', function() {
-  console.log('Button 2 clicked');  // Debugging line
   sendEmail('https://ibb.co/8KhB3gb', 'Image 2', 'template_ef182zq');
 });
-
-
-
-
