@@ -62,7 +62,7 @@ emailjs.init("NX9MO1iz35wQucWgk");
 // Function to send email
 function sendEmail(imageUrl, subject, templateId) {
   const templateParams = {
-    to_email: 'arunkumar.s202006@gmail.com', // Recipient's email address
+    to_email: 'arunkumar.s012006@gmail.com', // Recipient's email address
     subject: subject,  // Subject (Image name)
     message: 'open the link or image:', // Message content
     image_url: imageUrl, // Image URL to be included in the email
@@ -85,5 +85,5 @@ document.getElementById('button1').addEventListener('click', function() {
 
 // Button 2 click event for sending Image 2
 document.getElementById('button2').addEventListener('click', function() {
-  sendEmail('https://ibb.co/8KhB3gb', 'Image 2', 'template_gxmvvso');
+  sendEmail('https://ibb.co/8KhB3gb', 'Image 2', 'template_i59uxa8');
 });
